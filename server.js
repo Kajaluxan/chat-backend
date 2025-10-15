@@ -5,7 +5,7 @@ import { getChatHistory, saveMessage } from "./services/chat.service.js";
 
 dotenv.config();
 
-const PORT = process.env.SOCKET_PORT || 7000;
+const PORT = process.env.PORT || process.env.SOCKET_PORT || 7000;
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
